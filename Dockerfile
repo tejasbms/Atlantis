@@ -4,5 +4,6 @@ FROM ghcr.io/runatlantis/atlantis:latest
 USER root
 RUN mkdir /home/atlantis/.aws && \
 	touch /home/atlantis/.aws/credentials && \
-	touch /home/atlantis/.aws/config
-RUN chown atlantis.atlantis /home/atlantis/ -R
+	touch /home/atlantis/.aws/config && \
+	chown atlantis.atlantis /home/atlantis/ -R
+USER atlantis
