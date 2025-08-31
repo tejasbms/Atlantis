@@ -5,5 +5,5 @@ USER root
 RUN mkdir -p /home/atlantis/.aws && \
 	touch /home/atlantis/.aws/credentials && \
 	touch /home/atlantis/.aws/config && \
-	chown atlantis:atlantis /home/atlantis/ -R
+	chown -R atlantis:atlantis /home/atlantis/
 USER atlantis
